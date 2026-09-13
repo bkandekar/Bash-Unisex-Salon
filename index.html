@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Bash Unisex Salon | Best Hair &amp; Beauty Salon in Prabhadevi, Mumbai</title>
+ <meta name="description" content="Bash Unisex Salon in Prabhadevi, Mumbai offers couture haircuts, balayage, keratin smoothening, hair spa, and nail care. Rated 4.7★ (124+ reviews). Book on WhatsApp." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+ <style>
+ :root {
+ --charcoal: #141414;
+ --pink: #E85D8A;
+ --pink-soft: #FDF2F5;
+ --gold: #D4AF37;
+ --gold-soft: #FAF6E8;
+ --bg: #FCF9F6;
+ --white: #FFFFFF;
+ --text: #262626;
+ --muted: #666666;
+ --border: rgba(20,20,20,0.08);
+ --font-serif: 'Playfair Display', Georgia, serif;
+ --font-sans: 'Poppins', sans-serif;
+ --radius: 12px;
+ --shadow: 0 8px 24px rgba(20,20,20,0.06);
+ }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.6; }
+ img { max-width: 100%; display: block; }
+ a { color: inherit; text-decoration: none; }
+ button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+ .section { padding: 60px 0; }
+ .section-tag { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); display: inline-block; margin-bottom: 6px; }
+ .section-tag.gold { color: var(--gold); }
+ .section-title { font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; line-height: 1.25; }
+ .section-title em { font-style: italic; color: var(--pink); font-weight: 400; }
+ .section-desc { font-size: 0.92rem; color: var(--muted); max-width: 600px; }
+ .text-center { text-align: center; }
+ .text-center .section-desc { margin: 0 auto; }
+ .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 22px; border-radius: 9999px; font-weight: 600; font-size: 0.88rem; transition: 0.2s ease; white-space: nowrap; }
+ .btn-primary { background: var(--pink); color: #fff; box-shadow: 0 4px 14px rgba(232,93,138,0.3); }
+ .btn-primary:hover { background: #D24874; transform: translateY(-2px); }
+ .btn-outline { border: 1.5px solid var(--charcoal); color: var(--charcoal); }
+ .btn-outline:hover { background: var(--charcoal); color: #fff; }
+ .btn-whatsapp { background: #25D366; color: #fff; box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
+ .btn-whatsapp:hover { background: #1EBE5B; transform: translateY(-2px); }
+ .btn-sm { padding: 7px 15px; font-size: 0.8rem; }
+ .header { position: sticky; top: 0; z-index: 100; background: rgba(252,249,246,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+ .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+ .logo-name { font-family: var(--font-serif); font-size: 1.65rem; font-weight: 700; color: var(--charcoal); }
+ .logo-name span { color: var(--pink); }
+ .logo-sub { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-top: -3px; }
+ .nav { display: none; }
+ @media (min-width: 900px) { .nav { display: flex; gap: 20px; font-size: 0.86rem; font-weight: 500; } .nav a:hover { color: var(--pink); } }
+ .header-actions { display: flex; align-items: center; gap: 8px; }
+ .hero { padding: 36px 0 50px; }
+ .hero-grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
+ @media (min-width: 840px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
+ .badge-rating { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; background: var(--gold-soft); border: 1px solid rgba(212,175,55,0.3); border-radius: 9999px; font-size: 0.8rem; font-weight: 600; color: #9A7418; margin-bottom: 14px; }
+ .hero h1 { font-family: var(--font-serif); font-size: 2.4rem; line-height: 1.2; color: var(--charcoal); margin-bottom: 14px; }
+ .hero h1 span { color: var(--pink); font-style: italic; }
+ .hero-lead { font-size: 0.95rem; color: var(--muted); margin-bottom: 20px; }
+ .hero-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+ .hero-perks { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; font-weight: 500; }
+ .hero-perks span::before { content: '✓ '; color: var(--pink); font-weight: 700; }
+ .hero-img { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; }
+ .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+ .marquee { background: var(--charcoal); color: #CCC; padding: 12px 0; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+ .marquee span { color: var(--gold); margin: 0 10px; }
+ .quiz-box { background: #fff; border-radius: var(--radius); padding: 30px 24px; box-shadow: var(--shadow); border: 1px solid var(--border); max-width: 680px; margin: 24px auto 0; }
+ .quiz-step { display: none; }
+ .quiz-step.active { display: block; }
+ .quiz-q { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; color: var(--charcoal); }
+ .quiz-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+ @media (min-width: 540px) { .quiz-grid { grid-template-columns: 1fr 1fr; } }
+ .quiz-opt { padding: 14px; border: 1.5px solid var(--border); border-radius: 8px; text-align: left; background: var(--bg); transition: 0.2s; }
+ .quiz-opt:hover { border-color: var(--pink); background: var(--pink-soft); }
+ .quiz-opt h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); }
+ .quiz-opt p { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+ .quiz-res { background: var(--charcoal); color: #fff; padding: 22px; border-radius: 10px; }
+ .builder-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 24px; }
+ @media (min-width: 800px) { .builder-grid { grid-template-columns: 1.3fr 0.7fr; } }
+ .builder-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #fff; border: 1.5px solid var(--border); border-radius: 8px; cursor: pointer; margin-bottom: 8px; }
+ .builder-item.selected { border-color: var(--pink); background: var(--pink-soft); }
+ .builder-item input { accent-color: var(--pink); margin-right: 10px; }
+ .builder-summary { background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); position: sticky; top: 84px; }
+ .sum-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); margin-bottom: 8px; }
+ .sum-row.total { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; font-weight: 700; font-size: 1.2rem; color: var(--charcoal); }
+ .save-tag { background: var(--gold-soft); color: #9A7418; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 9999px; display: inline-block; margin-bottom: 12px; }
+ .offers-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+ @media (min-width: 720px) { .offers-grid { grid-template-columns: repeat(3, 1fr); } }
+ .offer-card { background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column; }
+ .offer-card img { height: 150px; width: 100%; object-fit: cover; }
+ .offer-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+ .offer-price-row { display: flex; align-items: baseline; gap: 8px; margin: 12px 0; }
+ .offer-now { font-size: 1.25rem; font-weight: 700; color: var(--pink); }
+ .offer-was { font-size: 0.85rem; text-decoration: line-through; color: #999; }
+ .ba-box { max-width: 660px; margin: 24px auto 0; position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/10; box-shadow: var(--shadow); user-select: none; }
+ .ba-box img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+ .ba-before { position: absolute; inset: 0; width: 50%; overflow: hidden; }
+ .ba-before img { width: 660px; max-width: none; }
+ .ba-div { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; cursor: ew-resize; }
+ .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 32px; height: 32px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+ .filter-tabs { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 18px 0; }
+ .tab { padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; color: var(--muted); background: #fff; border: 1px solid var(--border); }
+ .tab.active, .tab:hover { background: var(--charcoal); color: #fff; }
+ .services-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+ @media (min-width: 720px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+ .service-card { background: #fff; border-radius: var(--radius); padding: 18px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; }
+ .svc-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+ .svc-title { font-size: 1rem; font-weight: 700; }
+ .svc-price { font-size: 1.1rem; font-weight: 700; color: var(--pink); }
+ .svc-desc { font-size: 0.82rem; color: var(--muted); margin-bottom: 14px; }
+ .svc-foot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; }
+ .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 24px; }
+ @media (min-width: 860px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+ .team-card { background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); text-align: center; }
+ .team-card img { height: 180px; width: 100%; object-fit: cover; }
+ .team-card div { padding: 14px; }
+ .team-card h4 { font-size: 0.95rem; font-weight: 700; }
+ .team-card p { font-size: 0.75rem; color: var(--pink); font-weight: 600; margin-bottom: 6px; }
+ .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 24px; }
+ @media (min-width: 720px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+ .gallery-item { aspect-ratio: 1/1; border-radius: 10px; overflow: hidden; position: relative; border: 1px solid var(--border); }
+ .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+ .gallery-item:hover img { transform: scale(1.05); }
+ .reviews-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+ @media (min-width: 720px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); } }
+ .rev-card { background: #fff; border-radius: var(--radius); padding: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+ .rev-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 8px; }
+ .rev-text { font-size: 0.84rem; font-style: italic; color: var(--text); margin-bottom: 12px; }
+ .rev-author { font-size: 0.8rem; font-weight: 700; color: var(--charcoal); }
+ .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+ .faq-q { width: 100%; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 0.9rem; display: flex; justify-content: space-between; }
+ .faq-a { padding: 0 16px 14px; font-size: 0.84rem; color: var(--muted); display: none; }
+ .faq-item.active .faq-a { display: block; }
+ .loc-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 24px; }
+ @media (min-width: 800px) { .loc-grid { grid-template-columns: 1fr 1fr; } }
+ .loc-card { background: #fff; border-radius: var(--radius); padding: 24px; border: 1px solid var(--border); }
+ .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; background: #E8F7EE; color: #1E8E47; margin-bottom: 14px; }
+ .map-box { border-radius: var(--radius); overflow: hidden; min-height: 320px; border: 1px solid var(--border); }
+ .map-box iframe { width: 100%; height: 100%; min-height: 320px; border: 0; }
+ .footer { background: var(--charcoal); color: #fff; padding: 48px 0 20px; font-size: 0.82rem; }
+ .footer-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 30px; }
+ @media (min-width: 700px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+ .footer-bottom { border-top: 1px solid #282828; padding-top: 16px; display: flex; justify-content: space-between; color: #777; flex-wrap: wrap; gap: 10px; font-size: 0.76rem; }
+ .floating-wa { position: fixed; bottom: 80px; right: 18px; width: 52px; height: 52px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 18px rgba(37,211,102,0.4); z-index: 95; }
+ @media (min-width: 768px) { .floating-wa { bottom: 20px; right: 20px; } }
+ .mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 8px 14px; display: flex; gap: 8px; z-index: 90; }
+ @media (min-width: 768px) { .mobile-bar { display: none; } }
+ .mobile-bar .btn { flex: 1; padding: 10px; }
+ .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 300; display: none; align-items: center; justify-content: center; padding: 14px; }
+ .modal.open { display: flex; }
+ .modal-box { background: #fff; border-radius: var(--radius); width: 100%; max-width: 440px; padding: 22px; position: relative; }
+ .modal-close { position: absolute; top: 14px; right: 14px; font-size: 1.2rem; }
+ .form-group { margin-bottom: 12px; }
+ .form-group label { display: block; font-size: 0.78rem; font-weight: 600; margin-bottom: 4px; }
+ .form-control { width: 100%; padding: 9px 12px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.85rem; outline: none; }
+ .form-control:focus { border-color: var(--pink); }
+ </style>
+</head>
+<body>
+ <!-- Header -->
+ <header class="header">
+ <div class="container header-inner">
+ <a href="#" class="logo">
+ <span class="logo-name">Bash<span>.</span></span>
+ <span class="logo-sub">Prabhadevi · Mumbai</span>
+ </a>
+ <nav class="nav">
+ <a href="#about">About</a>
+ <a href="#quiz">Style Matcher</a>
+ <a href="#builder">Package Builder</a>
+ <a href="#offers">Offers</a>
+ <a href="#services">Services</a>
+ <a href="#team">Stylists</a>
+ <a href="#location">Location</a>
+ </nav>
+ <div class="header-actions">
+ <a href="tel:9067257872" class="btn btn-outline btn-sm">Call Salon</a>
+ <button class="btn btn-whatsapp btn-sm" onclick="openModal()">WhatsApp</button>
+ </div>
+ </div>
+ </header>
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="container hero-grid">
+ <div>
+ <div class="badge-rating">★ 4.7 Rated on Google (124+ Reviews)</div>
+ <h1>Where Style Meets Relaxation at <span>Bash Unisex Salon</span></h1>
+ <p class="hero-lead">Prabhadevi's destination for couture haircuts, balayage, liquid-silk keratin smoothening, and artisan spa therapies. Located right opposite Prabhadevi Mandir.</p>
+ <div class="hero-btns">
+ <button class="btn btn-primary" onclick="openModal()">Book on WhatsApp</button>
+ <a href="#quiz" class="btn btn-outline">Find My Style Match</a>
+ </div>
+ <div class="hero-perks">
+ <span>Opp. Prabhadevi Mandir</span>
+ <span>100% Genuine L'Oréal &amp; Olaplex</span>
+ <span>Open Daily 10 AM – 10:30 PM</span>
+ </div>
+ </div>
+ <div class="hero-img">
+ <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Bash Salon Luxury Interior" />
+ </div>
+ </div>
+ </section>
+ <!-- Brand Strip -->
+ <div class="marquee">
+ L'Oréal Professionnel <span>✦</span> Kérastase <span>✦</span> Olaplex No. 1 &amp; 2 <span>✦</span> Schwarzkopf <span>✦</span> Moroccanoil <span>✦</span> O.P.I Nails <span>✦</span> Dyson Pro
+ </div>
+ <!-- About Section -->
+ <section class="section" id="about">
+ <div class="container text-center">
+ <span class="section-tag">About Our Sanctuary</span>
+ <h2 class="section-title">Elevating Prabhadevi's <em>Salon Experience</em></h2>
+ <p class="section-desc">With over 15,000+ satisfied clients across South Mumbai, Bash Unisex Salon blends modern-vintage warmth with certified colorists and European hair protocols.</p>
+ </div>
+ </section>
+ <!-- Interactive Style Matcher Quiz -->
+ <section class="section" id="quiz" style="background: #FFF;">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag gold">Interactive Consultation</span>
+ <h2 class="section-title">Not Sure What to Book? <em>Find Your Match</em></h2>
+ <p class="section-desc">Answer 2 quick questions to find your recommended service and transparent rate.</p>
+ </div>
+ <div class="quiz-box">
+ <div class="quiz-step active" id="q1">
+ <h3 class="quiz-q">Step 1: Who is this appointment for?</h3>
+ <div class="quiz-grid">
+ <button class="quiz-opt" onclick="goQuiz2('women')">
+ <h4>Women's Hair &amp; Beauty</h4>
+ <p>Balayage, Keratin, Spa, Hydra Facial</p>
+ </button>
+ <button class="quiz-opt" onclick="goQuiz2('men')">
+ <h4>Men's Grooming &amp; Styling</h4>
+ <p>Fades, Beard Sculpting, Scalp Detox</p>
+ </button>
+ </div>
+ </div>
+ <div class="quiz-step" id="q2">
+ <h3 class="quiz-q">Step 2: What is your primary priority?</h3>
+ <div class="quiz-grid">
+ <button class="quiz-opt" onclick="showQuizRes('keratin')">
+ <h4>Eliminate Frizz &amp; Smooth</h4>
+ <p>Glass hair, humidity-proof shine</p>
+ </button>
+ <button class="quiz-opt" onclick="showQuizRes('color')">
+ <h4>Balayage / Highlights</h4>
+ <p>Sun-kissed blend tailored to Indian skin</p>
+ </button>
+ <button class="quiz-opt" onclick="showQuizRes('cut')">
+ <h4>Trending Haircut &amp; Styling</h4>
+ <p>Layers, curtain bangs, or precision crop</p>
+ </button>
+ <button class="quiz-opt" onclick="showQuizRes('spa')">
+ <h4>L'Oréal Powerdose Hair Spa</h4>
+ <p>Micro-lipid moisture with steam massage</p>
+ </button>
+ </div>
+ </div>
+ <div class="quiz-step" id="q3">
+ <div class="quiz-res">
+ <h3 id="q-title" style="font-size: 1.25rem;">Liquid Silk Keratin Smoothening</h3>
+ <p id="q-price" style="color: var(--gold); font-weight: 700; margin: 4px 0 10px;">From ₹4,999</p>
+ <p id="q-desc" style="font-size: 0.84rem; color: #CCC; margin-bottom: 16px;">Eliminates 95% frizz for 4+ months in Mumbai humidity.</p>
+ <button class="btn btn-whatsapp btn-sm" onclick="bookQuizResult()">Book Recommendation on WhatsApp</button>
+ <button class="btn btn-outline btn-sm" style="color: #fff; border-color: #666; margin-left: 6px;" onclick="resetQuiz()">Retry</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Custom Package Builder & Savings Calculator -->
+ <section class="section" id="builder">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag">Custom Pamper Calculator</span>
+ <h2 class="section-title">Build Your Package &amp; <em>Save Up to 20%</em></h2>
+ <p class="section-desc">Pick 2 services for 10% off, 3 for 15% off, and 4+ for 20% off your total bill!</p>
+ </div>
+ <div class="builder-grid">
+ <div>
+ <label class="builder-item selected">
+ <div>
+ <input type="checkbox" class="b-chk" checked data-name="Women's Couture Haircut" data-price="750" onchange="recalc()" />
+ <strong>Women's Couture Haircut &amp; Styling</strong>
+ </div>
+ <span>₹750</span>
+ </label>
+ <label class="builder-item selected">
+ <div>
+ <input type="checkbox" class="b-chk" checked data-name="L'Oréal Powerdose Hair Spa" data-price="1400" onchange="recalc()" />
+ <strong>L'Oréal Powerdose Hair Spa with Steam</strong>
+ </div>
+ <span>₹1,400</span>
+ </label>
+ <label class="builder-item">
+ <div>
+ <input type="checkbox" class="b-chk" data-name="Radiant Hydra Glow Facial" data-price="1800" onchange="recalc()" />
+ <strong>Radiant Hydra Glow Facial</strong>
+ </div>
+ <span>₹1,800</span>
+ </label>
+ <label class="builder-item">
+ <div>
+ <input type="checkbox" class="b-chk" data-name="Gel Polish Manicure" data-price="1100" onchange="recalc()" />
+ <strong>Gel Polish Manicure &amp; Spa</strong>
+ </div>
+ <span>₹1,100</span>
+ </label>
+ <label class="builder-item">
+ <div>
+ <input type="checkbox" class="b-chk" data-name="Gentleman's Skin Fade &amp; Beard" data-price="750" onchange="recalc()" />
+ <strong>Gentleman's Skin Fade &amp; Beard Sculpting</strong>
+ </div>
+ <span>₹750</span>
+ </label>
+ </div>
+ <div class="builder-summary">
+ <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">Package Summary</h3>
+ <span class="save-tag" id="c-tag">10% Combo Savings Applied!</span>
+ <div class="sum-row"><span>Services:</span><strong id="c-count">2 Services</strong></div>
+ <div class="sum-row"><span>Original:</span><span id="c-orig">₹2,150</span></div>
+ <div class="sum-row" style="color: #1E8E47;"><span>Combo Discount:</span><span id="c-disc">-₹215 (10%)</span></div>
+ <div class="sum-row total"><span>Total:</span><span style="color: var(--pink);" id="c-total">₹1,935</span></div>
+ <button class="btn btn-whatsapp" style="width: 100%; margin-top: 14px;" onclick="bookBuilder()">Book Package on WhatsApp</button>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Curated Offers -->
+ <section class="section" id="offers" style="background: #FFF;">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag gold">Limited Privileges</span>
+ <h2 class="section-title">Curated Seasonal <em>Offers</em></h2>
+ <p class="section-desc">Signature rituals paired for guaranteed savings.</p>
+ </div>
+ <div class="offers-grid">
+ <div class="offer-card">
+ <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Glow Suite" />
+ <div class="offer-body">
+ <h3 style="font-size: 1.05rem; font-weight: 700;">Prabhadevi Glow Suite</h3>
+ <p style="font-size: 0.8rem; color: var(--muted); margin: 6px 0;">L'Oréal Hair Spa + Hydra Facial Cleanup + Blowdry.</p>
+ <div class="offer-price-row">
+ <span class="offer-now">₹2,199</span>
+ <span class="offer-was">₹2,950</span>
+ </div>
+ <button class="btn btn-primary btn-sm" onclick="openModal('Prabhadevi Glow Suite (₹2,199)')">Claim Offer</button>
+ </div>
+ </div>
+ <div class="offer-card">
+ <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Gentleman Ritual" />
+ <div class="offer-body">
+ <h3 style="font-size: 1.05rem; font-weight: 700;">Executive Gentleman</h3>
+ <p style="font-size: 0.8rem; color: var(--muted); margin: 6px 0;">Skin Fade + Beard Sculpting with Steam + D-Tan Pack.</p>
+ <div class="offer-price-row">
+ <span class="offer-now">₹1,299</span>
+ <span class="offer-was">₹1,750</span>
+ </div>
+ <button class="btn btn-primary btn-sm" onclick="openModal('Executive Gentleman Ritual (₹1,299)')">Claim Offer</button>
+ </div>
+ </div>
+ <div class="offer-card">
+ <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=500&q=80" alt="Keratin Revive" />
+ <div class="offer-body">
+ <h3 style="font-size: 1.05rem; font-weight: 700;">Liquid Silk Keratin Offer</h3>
+ <p style="font-size: 0.8rem; color: var(--muted); margin: 6px 0;">Full botanical keratin treatment + Split-end trim.</p>
+ <div class="offer-price-row">
+ <span class="offer-now">₹4,499</span>
+ <span class="offer-was">₹6,000</span>
+ </div>
+ <button class="btn btn-primary btn-sm" onclick="openModal('Liquid Silk Keratin Offer (₹4,499)')">Claim Offer</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Before & After Slider -->
+ <section class="section">
+ <div class="container text-center">
+ <span class="section-tag">Visual Proof</span>
+ <h2 class="section-title">Hair <em>Transformations</em></h2>
+ <p class="section-desc">Slide horizontally to see the mirror-shine results achieved at our salon.</p>
+ <div class="ba-box" id="ba">
+ <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=700&q=80" alt="After Keratin" />
+ <div class="ba-before" id="ba-b"><img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=700&q=80" alt="Before" /></div>
+ <div class="ba-div" id="ba-d"><div class="ba-handle">◀ ▶</div></div>
+ </div>
+ </div>
+ </section>
+ <!-- Services Menu -->
+ <section class="section" id="services" style="background: #FFF;">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag">Menu &amp; Pricing</span>
+ <h2 class="section-title">Transparent <em>Salon Menu</em></h2>
+ <p class="section-desc">Upfront pricing with genuine European products.</p>
+ </div>
+ <div class="filter-tabs">
+ <button class="tab active" onclick="filterTab('all', this)">All</button>
+ <button class="tab" onclick="filterTab('hair', this)">Haircuts</button>
+ <button class="tab" onclick="filterTab('color', this)">Color &amp; Balayage</button>
+ <button class="tab" onclick="filterTab('keratin', this)">Keratin &amp; Spa</button>
+ <button class="tab" onclick="filterTab('men', this)">Men's</button>
+ <button class="tab" onclick="filterTab('skin', this)">Skin &amp; Nails</button>
+ </div>
+ <div class="services-grid">
+ <div class="service-card" data-cat="hair">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Women's Couture Haircut</h3><span class="svc-price">₹750</span></div>
+ <p class="svc-desc">Wash, bespoke precision cut, and voluminous blowdry.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 45 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Women\'s Haircut (₹750)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="color">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Honey Caramel Balayage</h3><span class="svc-price">₹4,500</span></div>
+ <p class="svc-desc">Seamless sun-kissed gradient with Olaplex No. 1 &amp; 2 bond repair.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 3.0 hrs</span><button class="btn btn-outline btn-sm" onclick="openModal('Honey Balayage (₹4,500)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="keratin">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Liquid Silk Keratin</h3><span class="svc-price">₹4,999</span></div>
+ <p class="svc-desc">Formaldehyde-free smoothing to conquer Mumbai humidity frizz.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 2.5 hrs</span><button class="btn btn-outline btn-sm" onclick="openModal('Liquid Silk Keratin (₹4,999)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="keratin">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">L'Oréal Hair Spa</h3><span class="svc-price">₹1,400</span></div>
+ <p class="svc-desc">Deep micro-lipid therapy with relaxing scalp steam massage.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 50 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('L\'Oréal Hair Spa (₹1,400)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="men">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Gentleman's Skin Fade</h3><span class="svc-price">₹400</span></div>
+ <p class="svc-desc">Precision taper fade, wash, and matte clay styling.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 30 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Gentleman\'s Skin Fade (₹400)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="men">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Beard Sculpting &amp; Steam</h3><span class="svc-price">₹350</span></div>
+ <p class="svc-desc">Hot towel softening, straight razor line, and organic beard oil.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 25 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Beard Sculpting (₹350)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="skin">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Radiant Hydra Glow Facial</h3><span class="svc-price">₹1,800</span></div>
+ <p class="svc-desc">Deep pore cleansing and hyaluronic hydration for instant glow.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 60 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Hydra Facial (₹1,800)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="skin">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Gel Polish Manicure</h3><span class="svc-price">₹1,100</span></div>
+ <p class="svc-desc">Cuticle care, scrub, hand massage, and chip-free OPI gel polish.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 45 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Gel Manicure (₹1,100)')">Book</button></div>
+ </div>
+ <div class="service-card" data-cat="skin">
+ <div>
+ <div class="svc-head"><h3 class="svc-title">Sea Salt Spa Pedicure</h3><span class="svc-price">₹1,200</span></div>
+ <p class="svc-desc">Himalayan salt soak, callus removal, and foot reflexology massage.</p>
+ </div>
+ <div class="svc-foot"><span>⏱ 50 mins</span><button class="btn btn-outline btn-sm" onclick="openModal('Spa Pedicure (₹1,200)')">Book</button></div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Master Stylists -->
+ <section class="section" id="team">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag">Artisans of Style</span>
+ <h2 class="section-title">Senior <em>Master Stylists</em></h2>
+ </div>
+ <div class="team-grid">
+ <div class="team-card">
+ <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=400&q=80" alt="Kunal Sharma" />
+ <div><h4>Kunal Sharma</h4><p>Barber &amp; Director</p></div>
+ </div>
+ <div class="team-card">
+ <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=400&q=80" alt="Pooja Verma" />
+ <div><h4>Pooja Verma</h4><p>Balayage Colorist</p></div>
+ </div>
+ <div class="team-card">
+ <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Rhea Merchant" />
+ <div><h4>Rhea Merchant</h4><p>Esthetician &amp; Nails</p></div>
+ </div>
+ <div class="team-card">
+ <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Amit Deshmukh" />
+ <div><h4>Amit Deshmukh</h4><p>Keratin Master</p></div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Lookbook Gallery -->
+ <section class="section" id="gallery" style="background: #FFF;">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag">Lookbook</span>
+ <h2 class="section-title">Salon <em>Interiors &amp; Artistry</em></h2>
+ </div>
+ <div class="gallery-grid">
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Station" /></div>
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Color" /></div>
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=400&q=80" alt="Spa Basin" /></div>
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=400&q=80" alt="Keratin Hair" /></div>
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=400&q=80" alt="Gel Nails" /></div>
+ <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Fade" /></div>
+ </div>
+ </div>
+ </section>
+ <!-- Verified Google Reviews -->
+ <section class="section" id="reviews">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag gold">Google Reviews</span>
+ <h2 class="section-title">Loved by <em>15,000+ Clients</em></h2>
+ </div>
+ <div class="reviews-grid">
+ <div class="rev-card">
+ <div class="rev-stars">★★★★★</div>
+ <p class="rev-text">"Pooja at Bash gave me the most seamless caramel balayage without damaging my curls. Booking over WhatsApp was instantaneous!"</p>
+ <div class="rev-author">Ananya Mehta · Prabhadevi</div>
+ </div>
+ <div class="rev-card">
+ <div class="rev-stars">★★★★★</div>
+ <p class="rev-text">"Hands down the best men's fade and beard sculpt in South Mumbai. Located right opp. Prabhadevi Mandir."</p>
+ <div class="rev-author">Rohan Kulkarni · Worli</div>
+ </div>
+ <div class="rev-card">
+ <div class="rev-stars">★★★★★</div>
+ <p class="rev-text">"Their Keratin treatment made my morning routine effortless. Zero frizz even in humid Mumbai weather!"</p>
+ <div class="rev-author">Simran Parekh · Dadar West</div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- FAQ Section -->
+ <section class="section" id="faq" style="background: #FFF;">
+ <div class="container">
+ <div class="text-center">
+ <span class="section-tag">FAQ</span>
+ <h2 class="section-title">Common <em>Questions</em></h2>
+ </div>
+ <div style="max-width: 680px; margin: 20px auto 0;">
+ <div class="faq-item active" onclick="this.classList.toggle('active')">
+ <div class="faq-q">Do I need an advance appointment or do you take walk-ins? <span>▼</span></div>
+ <div class="faq-a">We welcome walk-ins! However, we recommend booking on WhatsApp or calling ahead—especially on weekends and for Balayage or Keratin—for zero wait time.</div>
+ </div>
+ <div class="faq-item" onclick="this.classList.toggle('active')">
+ <div class="faq-q">Where in Prabhadevi are you located? <span>▼</span></div>
+ <div class="faq-a">Shop No. 5, Ground Floor, Mankar Chawl, Plot 146, New Prabhadevi Road, right opposite Prabhadevi Mandir (Ameya Society), Mumbai 400025.</div>
+ </div>
+ <div class="faq-item" onclick="this.classList.toggle('active')">
+ <div class="faq-q">What payment methods do you accept? <span>▼</span></div>
+ <div class="faq-a">All major UPI apps (GPay, PhonePe, Paytm), Credit/Debit cards, and Cash.</div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Location & Map -->
+ <section class="section" id="location">
+ <div class="container">
+ <div class="loc-grid">
+ <div class="loc-card">
+ <span class="section-tag">Location &amp; Timings</span>
+ <h2 class="section-title" style="font-size: 1.7rem;">Visit <em>Bash Unisex Salon</em></h2>
+ <div class="status-badge" id="live-stat">Open Daily · 10:00 AM – 10:30 PM</div>
+ <p style="font-size: 0.88rem; margin-bottom: 12px;"><strong>Address:</strong> Shop No. 5, Ground Floor, Mankar Chawl, Plot - 146, New Prabhadevi Road, Opp. Prabhadevi Mandir, Ameya Society, Prabhadevi, Mumbai 400025</p>
+ <p style="font-size: 0.88rem; margin-bottom: 16px;"><strong>Direct Call:</strong> +91 90672 57872<br /><strong>WhatsApp:</strong> +91 83299 31123</p>
+ <a href="https://maps.google.com/?q=Prabhadevi+Mandir,+New+Prabhadevi+Road,+Mumbai" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Get Google Directions</a>
+ </div>
+ <div class="map-box">
+ <iframe title="Map Location" src="https://maps.google.com/maps?q=Prabhadevi+Mandir,+New+Prabhadevi+Road,+Mumbai&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy"></iframe>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Footer -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div>
+ <h3 style="font-family: var(--font-serif); font-size: 1.5rem;">Bash<span style="color: var(--pink);">.</span></h3>
+ <p style="color: #999; margin: 8px 0 12px;">Where Style Meets Relaxation. Prabhadevi's destination for hair color excellence, cuts, and spa.</p>
+ <span style="color: var(--gold); font-weight: 600;">★ 4.7 Rating (124+ Google Reviews)</span>
+ </div>
+ <div>
+ <h4 style="margin-bottom: 10px;">Quick Links</h4>
+ <p><a href="#services">Services Menu</a></p>
+ <p><a href="#quiz">Style Matcher</a></p>
+ <p><a href="#builder">Package Builder</a></p>
+ <p><a href="#offers">Curated Offers</a></p>
+ </div>
+ <div>
+ <h4 style="margin-bottom: 10px;">Contact</h4>
+ <p style="color: #999;">Opp. Prabhadevi Mandir, Mumbai 400025<br />Call: +91 90672 57872<br />WhatsApp: +91 83299 31123<br />Daily: 10 AM – 10:30 PM</p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>© 2026 Bash Unisex Salon Prabhadevi. All rights reserved.</span>
+ <span>Instant WhatsApp: +91 83299 31123</span>
+ </div>
+ </div>
+ </footer>
+ <!-- Floating WA & Mobile Sticky Bar -->
+ <a href="https://wa.me/918329931123?text=Hi%20Bash%20Unisex%20Salon!%20I'd%20like%20to%20inquire%20about%20booking." target="_blank" rel="noopener noreferrer" class="floating-wa" title="WhatsApp Chat">💬</a>
+ <div class="mobile-bar">
+ <a href="tel:9067257872" class="btn btn-outline">Call Salon</a>
+ <button class="btn btn-whatsapp" onclick="openModal()">WhatsApp Book</button>
+ </div>
+ <!-- WhatsApp Booking Modal -->
+ <div class="modal" id="modal">
+ <div class="modal-box">
+ <button class="modal-close" onclick="closeModal()">✕</button>
+ <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 4px;">Book on WhatsApp</h3>
+ <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 14px;">We'll pre-fill your details and send directly to +91 83299 31123.</p>
+ <form onsubmit="sendBooking(event)">
+ <div class="form-group">
+ <label>Your Name *</label>
+ <input type="text" id="m-name" class="form-control" placeholder="e.g. Priya Sharma" required />
+ </div>
+ <div class="form-group">
+ <label>Service *</label>
+ <select id="m-svc" class="form-control">
+ <option value="Women's Couture Haircut (₹750)">Women's Couture Haircut (₹750)</option>
+ <option value="Honey Caramel Balayage (₹4,500)">Honey Caramel Balayage (₹4,500)</option>
+ <option value="Liquid Silk Keratin (₹4,999)">Liquid Silk Keratin (₹4,999)</option>
+ <option value="L'Oréal Hair Spa (₹1,400)">L'Oréal Hair Spa (₹1,400)</option>
+ <option value="Gentleman's Skin Fade (₹400)">Gentleman's Skin Fade (₹400)</option>
+ <option value="Beard Sculpting &amp; Steam (₹350)">Beard Sculpting &amp; Steam (₹350)</option>
+ <option value="Hydra Glow Facial (₹1,800)">Hydra Glow Facial (₹1,800)</option>
+ <option value="Gel Manicure (₹1,100)">Gel Manicure (₹1,100)</option>
+ <option value="Prabhadevi Glow Suite (₹2,199)">Prabhadevi Glow Suite (₹2,199)</option>
+ <option value="Executive Gentleman (₹1,299)">Executive Gentleman (₹1,299)</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Preferred Date *</label>
+ <input type="date" id="m-date" class="form-control" required />
+ </div>
+ <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 6px;">Send to WhatsApp</button>
+ </form>
+ </div>
+ </div>
+ <script>
+ const WA = '918329931123';
+ function openModal(svc) {
+ if (svc) document.getElementById('m-svc').value = svc;
+ document.getElementById('modal').classList.add('open');
+ document.getElementById('m-date').value = new Date().toISOString().split('T')[0];
+ }
+ function closeModal() { document.getElementById('modal').classList.remove('open'); }
+ function sendBooking(e) {
+ e.preventDefault();
+ const n = document.getElementById('m-name').value;
+ const s = document.getElementById('m-svc').value;
+ const d = document.getElementById('m-date').value;
+ const msg = `*Appointment Request - Bash Unisex Salon*\nName: ${n}\nService: ${s}\nDate: ${d}\n\nPlease confirm my slot!`;
+ window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+ closeModal();
+ }
+ // Quiz
+ let qG = 'women';
+ function goQuiz2(g) { qG = g; document.getElementById('q1').classList.remove('active'); document.getElementById('q2').classList.add('active'); }
+ function showQuizRes(goal) {
+ document.getElementById('q2').classList.remove('active');
+ document.getElementById('q3').classList.add('active');
+ const t = document.getElementById('q-title');
+ const p = document.getElementById('q-price');
+ const d = document.getElementById('q-desc');
+ if (goal === 'keratin') { t.innerText = 'Liquid Silk Keratin Smoothening'; p.innerText = 'From ₹4,999'; d.innerText = 'Eliminates 95% frizz for 4+ months in Mumbai weather.'; }
+ else if (goal === 'color') { t.innerText = 'Honey Caramel Balayage & Olaplex'; p.innerText = 'From ₹4,500'; d.innerText = 'Seamless sun-kissed gradient tailored to Indian skin tones.'; }
+ else if (goal === 'cut') { t.innerText = qG === 'men' ? 'Gentleman Fade & Beard' : 'Women Couture Haircut & Style'; p.innerText = '₹750'; d.innerText = 'Personalized texture analysis, scalp wash, and precision cut.'; }
+ else { t.innerText = "L'Oréal Powerdose Hair Spa"; p.innerText = '₹1,400'; d.innerText = 'Intense micro-lipid infusion with steam massage.'; }
+ }
+ function bookQuizResult() { openModal(document.getElementById('q-title').innerText); }
+ function resetQuiz() { document.getElementById('q3').classList.remove('active'); document.getElementById('q1').classList.add('active'); }
+ // Package Builder
+ function recalc() {
+ const chks = document.querySelectorAll('.b-chk');
+ let cnt = 0, sum = 0;
+ chks.forEach(c => {
+ const p = c.closest('.builder-item');
+ if (c.checked) { cnt++; sum += parseInt(c.dataset.price); p.classList.add('selected'); }
+ else { p.classList.remove('selected'); }
+ });
+ let disc = cnt >= 4 ? 20 : (cnt === 3 ? 15 : (cnt === 2 ? 10 : 0));
+ let dAmt = Math.round(sum * disc / 100);
+ document.getElementById('c-count').innerText = `${cnt} Service${cnt === 1 ? '' : 's'}`;
+ document.getElementById('c-orig').innerText = `₹${sum.toLocaleString('en-IN')}`;
+ document.getElementById('c-disc').innerText = disc > 0 ? `-₹${dAmt.toLocaleString('en-IN')} (${disc}%)` : '₹0';
+ document.getElementById('c-total').innerText = `₹${(sum - dAmt).toLocaleString('en-IN')}`;
+ const tag = document.getElementById('c-tag');
+ tag.innerText = disc > 0 ? `${disc}% Combo Savings Applied!` : 'Select 2+ for 10% off';
+ }
+ function bookBuilder() {
+ const sel = [];
+ document.querySelectorAll('.b-chk:checked').forEach(c => sel.push(c.dataset.name));
+ if (!sel.length) return alert('Please select at least 1 service');
+ const tot = document.getElementById('c-total').innerText;
+ const msg = `*Custom Package - Bash Unisex Salon*\nServices:\n• ${sel.join('\n• ')}\n\nTotal: ${tot}\n\nPlease confirm availability!`;
+ window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+ }
+ // Filter
+ function filterTab(cat, btn) {
+ document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+ btn.classList.add('active');
+ document.querySelectorAll('.service-card').forEach(c => {
+ c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+ });
+ }
+ // Slider
+ const ba = document.getElementById('ba'), bab = document.getElementById('ba-b'), bad = document.getElementById('ba-d');
+ if (ba) {
+ function move(e) {
+ const r = ba.getBoundingClientRect();
+ const x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+ let p = (x / r.width) * 100;
+ if (p < 0) p = 0; if (p > 100) p = 100;
+ bab.style.width = p + '%';
+ bad.style.left = p + '%';
+ }
+ ba.addEventListener('mousemove', move);
+ ba.addEventListener('touchmove', move);
+ }
+ </script>
+</body>
+</html>

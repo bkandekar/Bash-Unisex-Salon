@@ -1,0 +1,6 @@
+{
+  "name": "Bash Unisex Salon",
+  "description": "Bash Unisex Salon in Prabhadevi, Mumbai offers premium haircuts, hair color, smoothening, nail care & spa for men and women. Rated 4.7★. Book your appointment on WhatsApp today.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
